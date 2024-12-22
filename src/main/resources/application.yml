@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: inventrymanagement
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: *****@gmail.com
+    password: **************
+    properties:
+      mail:
+        smtp:
+          auth: true              # Enable SMTP authentication
+          starttls:
+            enable: true         # Enable TLS
+          ssl:
+            trust: "*"        # Enable SSL (set to true if using SSL)
+      default:
+        encoding: UTF-8
+  datasource:
+    url: jdbc:mysql://localhost:3306/inventrydb
+    username: root
+    password: *****
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 9000
+jwt:
+  service:
+    secret-key: ddjhbfdvjdhjefh37846356375JDBDSHBFEUBFHDB93493485ncdjsdbfbajhfbKLEJFIBEFUEBFUAEBE
+    expiration: 6000000
+admin:
+  notification:
+    mail: ******@gmail.com
